@@ -16,13 +16,13 @@ root.title("Digital Clock")  # Title for the window.
 # and making the format as Hour:Minutes:seconds: am/pm, The day and Date.
 def time():
     str = strftime(" %I:%M:%S:%p \n %a,%d/%m/%y")
-    lab.config(text=str)
-    lab.after(1000, time)
+    label.config(text=str)
+    label.after(1000, time)
 
 
 # Creating label giving our window background color, font size, style and font color.
-lab = Label(root, font=("ds-digital", 130), background="black", foreground='Green')
-lab.pack(anchor='center')
+label = Label(root, font=("ds-digital", 130), background="black", foreground='Green')
+label.pack(anchor='center')
 
 # Calling our function time.
 time()
